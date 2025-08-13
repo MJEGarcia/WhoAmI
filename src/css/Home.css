@@ -1,0 +1,29 @@
+.skillsCont {
+    padding: 12px 0 22px 0;
+}
+
+.skillsCont svg {
+    margin-right: 4px;
+}
+
+.skillsCont div {
+    margin: 0 8px 0 8px;
+}
+
+.bebas-text {
+  font-family: var(--font-bebas);
+}
+
+@media screen and (max-width: 576px) {
+    .skillsCont {
+        display: grid;
+    }
+    .skillsCont div {
+        margin: 1vh;
+        justify-content: center;
+        width: 200px;
+    }
+    .portButton {
+        font-size: 0.6rem;
+    }
+}

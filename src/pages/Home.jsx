@@ -1,19 +1,58 @@
 import '../css/Home.css'
 import '../index.css'
-import { motion } from 'framer-motion'
+import { useState } from "react";
 
 function Home() {
+    
+    const [showModal, setShowModal] = useState(false);
+    const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "media/Garcia-Resume.pdf";
+    link.download = "Garcia-Resume.pdf";
+    link.click();
+    setShowModal(false);
+  };
+    
   return (
     <>
     <main className="bg-[var(--bold)] flex items-center justify-center h-[42vh] px-4 flex-col overflow-hidden">
-        <h1 className="bebas-text text-[var(--accent)] text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-center">
-            Hi, I'm Michael. How are you?
-        </h1>
-        <div className='justify-center flex mt-6'>
-            <button className='rounded-xl bg-[var(--accent)] px-6 py-2 mx-12 cursor-pointer transition duration-300 hover:bg-[var(--primary)]'>
-                <h1 className='portButton text-[var(--bold)] font-light text-1xl'>PORTFOLIO</h1>
-            </button>
+      <h1 className="bebas-text text-[var(--accent)] text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-center">
+        Hi, I'm Michael. How are you?
+      </h1>
+      <div className="justify-center flex mt-6">
+        <button
+          className="rounded-xl bg-[var(--accent)] px-6 py-2 mx-12 cursor-pointer transition duration-300 hover:bg-[var(--primary)]"
+          onClick={() => setShowModal(true)}
+        >
+          <h1 className="portButton text-[var(--bold)] font-light text-1xl">
+            PORTFOLIO
+          </h1>
+        </button>
+      </div>
+
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-[var(--bold)] p-6 rounded-xl text-center shadow-lg">
+            <h2 className="text-xl text-[var(--accent)] mb-4">
+              You are about to download a PDF file.
+            </h2>
+            <div className="flex justify-center gap-4">
+              <button
+                onClick={handleDownload}
+                className="bg-[var(--accent)] text-[var(--bold)] px-4 py-2 rounded-xl hover:bg-[var(--primary)] transition"
+              >
+                Continue
+              </button>
+              <button
+                onClick={() => setShowModal(false)}
+                className="bg-gray-500 text-white px-4 py-2 rounded-xl hover:bg-gray-600 transition"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
         </div>
+      )}
     </main>
     <main className="bg-[var(--backdrop)] flex justify-center">
         <div className="knowCont mt-[4vh]">

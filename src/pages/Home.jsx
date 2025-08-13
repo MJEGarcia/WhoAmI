@@ -29,7 +29,6 @@ function Home() {
           </h1>
         </button>
       </div>
-
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-[var(--bold)] p-6 rounded-xl text-center shadow-lg">
@@ -39,14 +38,12 @@ function Home() {
             <div className="flex justify-center gap-4">
               <button
                 onClick={handleDownload}
-                className="bg-[var(--accent)] text-[var(--bold)] px-4 py-2 rounded-xl hover:bg-[var(--primary)] transition"
-              >
+                className="bg-[var(--accent)] text-[var(--bold)] px-4 py-2 rounded-xl hover:bg-[var(--primary)] transition">
                 Continue
               </button>
               <button
                 onClick={() => setShowModal(false)}
-                className="bg-gray-500 text-white px-4 py-2 rounded-xl hover:bg-gray-600 transition"
-              >
+                className="bg-gray-500 text-white px-4 py-2 rounded-xl hover:bg-gray-600 transition">
                 Cancel
               </button>
             </div>
@@ -103,8 +100,8 @@ function Home() {
                 </div>
                 <div className="flex bg-[var(--bold)] pl-6 pr-6 pt-2 pb-2 rounded-2xl">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--accent)" class="bi bi-javascript" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM9.053 7.596v3.127l-.007 1.752q0 .498-.186.752t-.556.263q-.342 0-.528-.234-.185-.234-.185-.684v-.175H6.37v.185q0 .665.253 1.113.255.45.703.674.44.225 1.016.225.88 0 1.406-.498.527-.498.527-1.485l.007-1.752V7.596zm3.808-.108q-.585 0-1.006.244a1.67 1.67 0 0 0-.634.674 2.1 2.1 0 0 0-.225.996q0 .753.293 1.182.303.42.967.732l.469.215q.438.186.625.43.185.244.185.635 0 .478-.166.703-.156.224-.527.224-.361.001-.547-.244-.186-.243-.205-.752h-1.162q.02.996.498 1.524.479.527 1.386.527.909 0 1.417-.518.507-.517.507-1.484 0-.81-.332-1.289t-1.045-.79l-.449-.196q-.39-.166-.556-.381-.166-.214-.166-.576 0-.4.165-.596.177-.195.508-.195.361 0 .508.234.156.234.176.703h1.123q-.03-.976-.498-1.484-.47-.518-1.309-.518"/>
-</svg>
+                    <path fill-rule="evenodd" d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM9.053 7.596v3.127l-.007 1.752q0 .498-.186.752t-.556.263q-.342 0-.528-.234-.185-.234-.185-.684v-.175H6.37v.185q0 .665.253 1.113.255.45.703.674.44.225 1.016.225.88 0 1.406-.498.527-.498.527-1.485l.007-1.752V7.596zm3.808-.108q-.585 0-1.006.244a1.67 1.67 0 0 0-.634.674 2.1 2.1 0 0 0-.225.996q0 .753.293 1.182.303.42.967.732l.469.215q.438.186.625.43.185.244.185.635 0 .478-.166.703-.156.224-.527.224-.361.001-.547-.244-.186-.243-.205-.752h-1.162q.02.996.498 1.524.479.527 1.386.527.909 0 1.417-.518.507-.517.507-1.484 0-.81-.332-1.289t-1.045-.79l-.449-.196q-.39-.166-.556-.381-.166-.214-.166-.576 0-.4.165-.596.177-.195.508-.195.361 0 .508.234.156.234.176.703h1.123q-.03-.976-.498-1.484-.47-.518-1.309-.518"/>
+                    </svg>
                     <h1 className="text-[var(--accent)]">Javascript</h1>
                 </div>
                 <div className="flex bg-[var(--bold)] pl-6 pr-6 pt-2 pb-2 rounded-2xl">
@@ -166,8 +163,7 @@ function Home() {
                     className="w-6 h-6"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 200 300"
-                    fill="none"
-                    >
+                    fill="none">
                     <path fill="#0acf83" d="M50 300c27.6 0 50-22.4 50-50v-50H50c-27.6 0-50 22.4-50 50s22.4 50 50 50z"/>
                     <path fill="#a259ff" d="M0 150c0-27.6 22.4-50 50-50h50v100H50c-27.6 0-50-22.4-50-50z"/>
                     <path fill="#f24e1e" d="M0 50C0 22.4 22.4 0 50 0h50v100H50C22.4 100 0 77.6 0 50z"/>

@@ -7,8 +7,8 @@ function Home() {
     const [showModal, setShowModal] = useState(false);
     const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "media/Garcia-Resume.pdf";
-    link.download = "Garcia-Resume.pdf";
+    link.href = "media/GRCCV.pdf";
+    link.download = "GRCCV.pdf";
     link.click();
     setShowModal(false);
   };
